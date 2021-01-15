@@ -1,0 +1,88 @@
+:root {
+    --clr-dark-cyan: hsl(185, 75%, 39%);
+    --clr-dark-saturated-blue: hsl(229, 23%, 23%);
+    --clr-darkish-blue: hsl(227, 10%, 46%);
+    --clr-dark-grey: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--clr-dark-cyan);
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--clr-dark-grey);
+}
+.container {
+    background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: -50% 200%, 140% -160%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.profile-card {
+    border-radius: 12px;
+    min-width: 350px;
+    overflow: hidden;
+    box-shadow: 0 0 24px -6px var(--clr-darkish-blue);
+}
+.profile-card .profile-bg {
+    background: url('images/bg-pattern-card.svg');
+    min-height: 140px;
+}
+.profile-card .profile-contents {
+    background: #fff;
+    text-align: center;
+}
+.profile-contents .profile-img {
+    border-radius: 50%;
+    margin-top: -15%;
+    border: 5px solid #fff;
+}
+.profile-contents .profile-title {
+    padding: 20px 0;
+}
+.profile-title .profile-name {
+    padding-right: 5px;
+    color: var(--clr-dark-saturated-blue);
+    font-weight: 700;
+}
+.profile-title .profile-city {
+    padding-top: 10px;
+    font-size: 14px;
+}
+.profile-title .profile-count {
+    color: var(--clr-darkish-blue);
+}
+.profile-contents .profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 45px;
+    border-top: 2px solid hsl(0deg 0% 96%);
+}
+.profile-inner-detail .profile-desc {
+    color: var(--clr-dark-saturated-blue);
+    font-weight: 700;
+}
+.profile-inner-detail .profile-desc-title {
+    font-size: 10px;
+    padding-top: 10px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 376px) {
+    .profile-card {
+        min-width: 90%;
+    }
+    .container {
+        background-position: 125% 200%, -27% -80%;
+    }
+}
